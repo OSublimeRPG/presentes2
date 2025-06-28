@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curiosidades de Hamsters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      font-style: italic;
+    }
+
+    body {
+      background: linear-gradient(to right, #e0709c, #d04784);
+      color: #4a003a;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fbd1df;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #d04784;
+      border: 2px solid #d04784;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #a3005e;
+      background-color: #f296b4;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      display: inline-block;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #5a004e;
+    }
+
+    .curiosidades {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: #f9c0d7;
+      border-left: 8px solid #d04784;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #d04784;
+    }
+
+    .card h2 {
+      color: #8c0049;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #4a003a;
+    }
+
+    .audio-control {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .audio-control button {
+      background-color: #d04784;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .audio-control button:hover {
+      background-color: #a3005e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🐹 Uma cartinha fofa pra você ❤</h1>
+      <p>Oi! Se você ama essas criaturinhas adoráveis chamadas hamsters, prepare-se para se apaixonar ainda mais. Aqui vão algumas curiosidades fofíssimas pra deixar seu dia mais leve e cheio de fofura 💖</p>
+    </header>
+
+    <section class="curiosidades">
+      <div class="card">
+        <h2>🏃‍♀️ Corredores Noturnos</h2>
+        <p>Hamsters podem correr até <strong>9 km por noite</strong> na rodinha! Eles são superativos à noite e amam explorar. A rodinha é essencial pra gastar energia, e é fofo pensar num bichinho tão pequenininho correndo como se estivesse numa maratona!</p>
+      </div>
+
+      <div class="card">
+        <h2>😴 Sono Profundo</h2>
+        <p>Quando um hamster está num sono bem profundo, ele fica todo encolhidinho, quentinho e imóvel, às vezes até assusta quem vê, achando que ele está doente. Mas na verdade, ele só está curtindo um soninho bem gostoso!</p>
+      </div>
+
+      <div class="card">
+        <h2>🍽️ Bochechas Elásticas</h2>
+        <p>Os hamsters adoram guardar comida nas bochechas! Elas funcionam como “bolsos” elásticos até os ombros. Eles enchem esses espaços com comida para levar ao esconderijo, e ficam com carinhas super rechonchudas, o que os deixa ainda mais fofos!</p>
+      </div>
+    </section>
+
+    <div class="audio-control">
+      <button onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
+      <audio id="musica">
+        <source src="The Police - Every Breath You Take (Official Music Video) [OMOGaugKpzs].mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio HTML5.
+      </audio>
+    </div>
+  </div>
+</body>
+</html>
