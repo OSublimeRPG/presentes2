@@ -96,16 +96,6 @@
       background-color: #a3005e;
     }
 
-    .confete {
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      background-color: red;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: cair 3s linear forwards;
-    }
-
     @keyframes cair {
       to {
         transform: translateY(100vh) rotate(360deg);
@@ -162,16 +152,7 @@
     </div>
   </div>
 
-  <script>
-    for (let i = 0; i < 30; i++) { 
-      const confete = document.createElement('div');
-      confete.className = 'confete';
-      confete.style.left = Math.random() * window.innerWidth + 'px';
-      confete.style.backgroundColor = `hsl(${Math.random()*360}, 100%, 50%)`;
-      confete.style.animationDuration = (2 + Math.random() * 2) + 's';
-      document.body.appendChild(confete);
-    }
-  </script>
 </body>
 </html>
+
 
