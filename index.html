@@ -18,6 +18,7 @@
       background: linear-gradient(to right, #e0709c, #d04784);
       color: #4a003a;
       padding: 2rem;
+      overflow: hidden; /* necessário para confetes */
     }
 
     .container {
@@ -93,6 +94,17 @@
     .audio-control button:hover {
       background-color: #a3005e;
     }
+
+    /* Confetes */
+    .confete {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      pointer-events: none;
+      border-radius: 50%;
+      opacity: 0.9;
+      will-change: transform;
+    }
   </style>
 </head>
 <body>
@@ -127,6 +139,38 @@
       </audio>
     </div>
   </div>
+
+  <script>
+    function criarConfete() {
+        const confete = document.createElement('div');
+        confete.classList.add('confete');
+        confete.style.backgroundColor = `hsl(${Math.random()*360}, 100%, 50%)`;
+        confete.style.left = Math.random() * window.innerWidth + 'px';
+        confete.style.top = '0px';
+        document.body.appendChild(confete);
+
+        const velocidadeX = (Math.random() - 0.5) * 10;
+        const velocidadeY = Math.random() * 15 + 5;
+        let posX = parseFloat(confete.style.left);
+        let posY = 0;
+
+        function animar() {
+            posX += velocidadeX;
+            posY += velocidadeY;
+            confete.style.transform = `translate(${posX}px, ${posY}px) rotate(${posY * 3}deg)`;
+            if(posY < window.innerHeight) {
+                requestAnimationFrame(animar);
+            } else {
+                confete.remove();
+            }
+        }
+        animar();
+    }
+
+    // Cria explosão de confetes ao entrar
+    for(let i=0; i<100; i++){
+        setTimeout(criarConfete, i * 10);
+    }
+  </script>
 </body>
 </html>
-
